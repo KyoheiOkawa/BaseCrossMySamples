@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{43aa3f13-dd9e-43d7-8321-ba54a1e3400f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\INCShadowmap.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\INCStructs.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCCommon.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCLighting.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCParameters.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCStructs.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCShadow.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\INCParameters.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPNTStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSShadowmap.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSShadowmapBone.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPNTStaticShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPNTStaticShadow2.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTStaticShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPCTStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCTStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPCTSprite.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPTSprite.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCTSprite.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPTSprite.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPCSprite.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCSprite.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPCStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTBone.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTBoneShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPTStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPTStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticVL.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticPL.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticVLBn.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticPLShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticVLShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticVLBnShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticPLBn.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticPLBnShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPTStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPTStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBoneVL.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBoneVLBn.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBoneVLShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBoneVLBnShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBonePL.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBonePLShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBonePLBn.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBonePLBnShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTPL.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTPLShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTVL.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTVLShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTnTStaticPL.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTnTPL.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTnTPLShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTnTStaticPLShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTnTBonePL.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTnTBonePLShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSShadowmapBoneWithTan.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPCTStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPCStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPCStatic.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTStaticInstance.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTStaticInstanceShadow.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCTStaticInstance.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPTStaticInstance.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCStaticInstance.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

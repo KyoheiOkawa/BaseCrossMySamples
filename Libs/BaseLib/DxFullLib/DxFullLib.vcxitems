@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{B57F14D4-0224-4E49-B829-4273487291E9}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCCommon.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCLighting.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCParameters.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCShadow.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\BcINCStructs.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\INCParameters.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\INCShadowmap.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\INCStructs.hlsli" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPCStatic.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTnTPL.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTnTPLShadow.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTPL.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <FileType>Document</FileType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTPLShadow.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <FileType>Document</FileType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTVL.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <FileType>Document</FileType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPNTVLShadow.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <FileType>Document</FileType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcPSPTStatic.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPCStatic.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPCTStatic.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBonePL.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBonePLBn.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBonePLBnShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBonePLShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBoneVL.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBoneVLBn.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBoneVLBnShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTBoneVLShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTnTBonePL.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTnTBonePLShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTnTStaticPL.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTnTStaticPLShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticPL.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticPLBn.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticPLBnShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticPLShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticVL.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticVLBn.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticVLBnShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPNTStaticVLShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\BcVSPTStatic.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPCSprite.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPCStatic.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPCTSprite.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPCTStatic.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPNTStatic.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPNTStaticShadow.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPNTStaticShadow2.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPTSprite.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPTStatic.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCSprite.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCStatic.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCStaticInstance.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCTStaticInstance.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <FileType>Document</FileType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCTSprite.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPCTStatic.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTBone.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTBoneShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTStaticInstance.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <FileType>Document</FileType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTStatic.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTStaticInstanceShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPNTStaticShadow.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPTSprite.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPTStatic.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSPTStaticInstance.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSShadowmap.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSShadowmapBone.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\VSShadowmapBoneWithTan.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+</Project>
