@@ -10,7 +10,7 @@ namespace basecross {
 	///	ÉQÅ[ÉÄÉVÅ[Éì
 	//--------------------------------------------------------------------------------------
 	class Scene : public SceneInterface {
-		shared_ptr<TorusObject> m_SphereObject;
+		shared_ptr<TorusObject> m_TorusObject;
 	public:
 		//--------------------------------------------------------------------------------------
 		/*!

@@ -10,6 +10,7 @@ namespace basecross {
 
 	class TorusObject : public ObjectInterface, public ShapeInterface {
 		shared_ptr<MeshResource> m_SphereMesh;
+		Quat m_Rotation;
 	public:
 		TorusObject();
 		virtual ~TorusObject();

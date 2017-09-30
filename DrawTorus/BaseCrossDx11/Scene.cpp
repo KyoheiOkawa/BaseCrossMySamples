@@ -12,11 +12,11 @@ namespace basecross {
 	///	ゲームシーン
 	//--------------------------------------------------------------------------------------
 	void Scene::OnCreate() {
-		m_SphereObject = ObjectFactory::Create<TorusObject>();
+		m_TorusObject = ObjectFactory::Create<TorusObject>();
 	}
 
 	void Scene::OnUpdate() {
-		m_SphereObject->OnUpdate();
+		m_TorusObject->OnUpdate();
 	}
 	void Scene::OnDraw() {
 		//描画デバイスの取得
@@ -24,7 +24,7 @@ namespace basecross {
 		Dev->ClearDefaultViews(Col4(0, 0, 0, 1.0f));
 		//デフォルト描画の開始
 		Dev->StartDefaultDraw();
-		m_SphereObject->OnDraw();
+		m_TorusObject->OnDraw();
 		//デフォルト描画の終了
 		Dev->EndDefaultDraw();
 	}

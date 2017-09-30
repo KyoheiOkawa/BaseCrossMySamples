@@ -7,7 +7,7 @@
 #include "Project.h"
 
 namespace basecross {
-	TorusObject::TorusObject() {
+	TorusObject::TorusObject(){
 
 	}
 
@@ -21,10 +21,14 @@ namespace basecross {
 		MeshUtill::CreateTorus(1, 0.5f, 100, vertices, indices);
 		m_SphereMesh = MeshResource::CreateMeshResource(vertices, indices, false);
 
+		m_Rotation.identity();
 	}
 
 	void TorusObject::OnUpdate() {
-
+		Quat QtSpan;
+		QtSpan.rotation(0.02f, Vec3(1, 0, 1));
+		m_Rotation *= QtSpan;
+		m_Rotation.normalize();
 	}
 
 	void TorusObject::OnDraw() {
@@ -33,7 +37,7 @@ namespace basecross {
 		World.affineTransformation(
 			Vec3(1, 1, 1),
 			Vec3(0, 0, 0),
-			Quat(0,0,0,1),
+			m_Rotation,
 			Vec3(0, 0, 0)
 		);
 
