@@ -60,7 +60,8 @@ namespace basecross {
 		UINT offset = 0;
 
 		Mat4x4 View, Proj;
-		View = XMMatrixLookAtLH(Vec3(0, 5, -2), Vec3(0, 0, 0), Vec3(0, 1, 0));
+		Vec3 CameraPos = Vec3(0, 5, -2);
+		View = XMMatrixLookAtLH(CameraPos, Vec3(0, 0, 0), Vec3(0, 1, 0));
 		float w = static_cast<float>(App::GetApp()->GetGameWidth());
 		float h = static_cast<float>(App::GetApp()->GetGameHeight());
 		Proj = XMMatrixPerspectiveFovLH(XM_PIDIV4, w / h, 1.0f, 100.0f);
@@ -72,11 +73,12 @@ namespace basecross {
 
 		PNStaticConstantBuffer sb;
 		sb.View = View;
+		sb.CameraLocation = CameraPos;
 		sb.Projection = Proj;
 		sb.LightDir = LightDir;
 
-		sb.Diffuse = Col4(1.0f, 1.0f, 1.0f, 1.0f);
-		sb.Emissive = Col4(0.4f, 0.4f, 0.4f, 0);
+		sb.Diffuse = Col4(0.8f, 0, 0, 1.0f);
+		sb.Emissive = Col4(0.25f, 0, 0, 0);
 
 		World.transpose();
 		sb.World = World;

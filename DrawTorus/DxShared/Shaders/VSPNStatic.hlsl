@@ -8,6 +8,7 @@ cbuffer SimpleConstantBuffer : register(b0)
 	float4 LightDir : packoffset(c12);
 	float4 Emissive : packoffset(c13);
 	float4 Diffuse : packoffset(c14);
+	float4 CameraLocation : packoffset(c15);
 }
 
 PSPNInput main(VSPNInput input)
@@ -23,6 +24,8 @@ PSPNInput main(VSPNInput input)
 
 	result.norm = mul(input.norm, (float3x3)World);
 	result.norm = normalize(result.norm);
+
+	result.eyeDir = normalize(CameraLocation - input.position.xyz);
 
 	return result;
 }

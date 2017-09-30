@@ -49,7 +49,8 @@ struct VSPNInput
 struct PSPNInput
 {
 	float4 position : SV_POSITION;
-	float3 norm : NORMAL;
+	float3 norm : NORMAL0;
+	float3 eyeDir : NORMAL1;
 };
 
 
