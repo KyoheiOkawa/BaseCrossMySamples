@@ -13,8 +13,8 @@ namespace basecross {
 	IMPLEMENT_DX11_PIXEL_SHADER(PSPCDirect, App::GetApp()->GetShadersPath() + L"PSPCDirect.cso")
 
 	IMPLEMENT_DX11_CONSTANT_BUFFER(CBPNStatic)
-	IMPLEMENT_DX11_VERTEX_SHADER(VSPNStatic,App::GetApp()->GetShadersPath() + L"VSPNStatic.cso")
-	IMPLEMENT_DX11_PIXEL_SHADER(PSPNStatic,App::GetApp()->GetShadersPath() + L"PSPNStatic.cso")
+	IMPLEMENT_DX11_VERTEX_SHADER(VSPNTStatic,App::GetApp()->GetShadersPath() + L"VSPNTStatic.cso")
+	IMPLEMENT_DX11_PIXEL_SHADER(PSPNTStatic,App::GetApp()->GetShadersPath() + L"PSPNTStatic.cso")
 
 }
 //end basecross

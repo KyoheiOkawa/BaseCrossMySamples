@@ -22,6 +22,11 @@ namespace basecross {
 		m_SphereMesh = MeshResource::CreateMeshResource(vertices, indices, false);
 
 		m_Rotation.identity();
+
+		wstring assetDir;
+		App::GetApp()->GetAssetsDirectory(assetDir);
+		wstring texStr = assetDir + L"Checker.png";
+		m_TextureResource = TextureResource::CreateTextureResource(texStr);
 	}
 
 	void TorusObject::OnUpdate() {
@@ -45,10 +50,10 @@ namespace basecross {
 		auto pD3D11DeviceContext = Dev->GetD3DDeviceContext();
 		auto RenderState = Dev->GetRenderState();
 
-		pD3D11DeviceContext->VSSetShader(VSPNStatic::GetPtr()->GetShader(), nullptr, 0);
-		pD3D11DeviceContext->PSSetShader(PSPNStatic::GetPtr()->GetShader(), nullptr, 0);
+		pD3D11DeviceContext->VSSetShader(VSPNTStatic::GetPtr()->GetShader(), nullptr, 0);
+		pD3D11DeviceContext->PSSetShader(PSPNTStatic::GetPtr()->GetShader(), nullptr, 0);
 
-		pD3D11DeviceContext->IASetInputLayout(VSPNStatic::GetPtr()->GetInputLayout());
+		pD3D11DeviceContext->IASetInputLayout(VSPNTStatic::GetPtr()->GetInputLayout());
 
 		pD3D11DeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
@@ -77,8 +82,8 @@ namespace basecross {
 		sb.Projection = Proj;
 		sb.LightDir = LightDir;
 
-		sb.Diffuse = Col4(0.8f, 0, 0, 1.0f);
-		sb.Emissive = Col4(0.25f, 0, 0, 0);
+		sb.Diffuse = Col4(1, 1, 1, 1.0f);
+		sb.Emissive = Col4(0.25f);
 
 		World.transpose();
 		sb.World = World;
@@ -96,6 +101,9 @@ namespace basecross {
 
 		pD3D11DeviceContext->OMSetBlendState(RenderState->GetOpaque(), nullptr, 0xffffffff);
 		pD3D11DeviceContext->RSSetState(RenderState->GetCullBack());
+
+		//テクスチャ
+		pD3D11DeviceContext->PSSetShaderResources(0, 1, m_TextureResource->GetShaderResourceView().GetAddressOf());
 
 		pD3D11DeviceContext->DrawIndexed(m_SphereMesh->GetNumIndicis(), 0, 0);
 

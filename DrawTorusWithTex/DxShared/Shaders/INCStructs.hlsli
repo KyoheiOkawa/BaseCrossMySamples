@@ -74,8 +74,9 @@ struct VSPNTBoneInput
 struct PSPNTInput
 {
 	float4 position : SV_POSITION;
-	float3 norm : NORMAL;
+	float3 norm : NORMAL0;
 	float2 tex : TEXCOORD;
+	float3 eyeDir : NORMAL1;
 };
 
 struct PSPNTInputShadow

@@ -11,9 +11,10 @@ cbuffer SimpleConstantBuffer : register(b0)
 	float4 CameraLocation : packoffset(c15);
 };
 
+Texture2D g_texture : register(t0);
 SamplerState g_sampler : register(s0);
 
-float4 main(PSPNInput input) : SV_TARGET
+float4 main(PSPNTInput input) : SV_TARGET
 {
 	float3 lightdir = normalize(LightDir.xyz);
 
@@ -25,5 +26,7 @@ float4 main(PSPNInput input) : SV_TARGET
 	Light += spec;
 
 	Light.a = Diffuse.a;
+
+	Light = g_texture.Sample(g_sampler, input.tex) * Light;
 	return saturate(Light);
 }
