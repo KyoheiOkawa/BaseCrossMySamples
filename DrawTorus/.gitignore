@@ -9,3 +9,4 @@ BaseCrossDx11.VC.db
 Temp/
 ipch/
 media/Shaders
+.vs/
