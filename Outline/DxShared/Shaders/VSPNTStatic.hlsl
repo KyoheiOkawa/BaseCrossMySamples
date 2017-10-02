@@ -14,7 +14,7 @@ cbuffer SimpleConstantBuffer : register(b0)
 
 PSPNTInput main(VSPNTInput input)
 {
-	PSPNTInput result;
+	PSPNTInput result = (PSPNTInput)0;
 
 	float4 pos = float4(input.position.xyz, 1.0f);
 	pos = mul(pos, World);
@@ -28,7 +28,7 @@ PSPNTInput main(VSPNTInput input)
 
 	result.tex = input.tex;
 
-	result.eyeDir = normalize(CameraLocation - input.position.xyz);
+	result.eyeDir = normalize(CameraLocation.xyz - input.position.xyz);
 
 	float4 subpos = input.position + float4(input.norm,0) * 0.025f;
 	subpos = mul(subpos, World);
