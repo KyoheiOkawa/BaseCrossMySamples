@@ -77,6 +77,8 @@ struct PSPNTInput
 	float3 norm : NORMAL0;
 	float2 tex : TEXCOORD;
 	float3 eyeDir : NORMAL1;
+	float4 subpos : POSITION0;
+	float4 outlineCol : COLOR;
 };
 
 struct PSPNTInputShadow

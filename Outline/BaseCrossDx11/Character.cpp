@@ -51,6 +51,7 @@ namespace basecross {
 		auto RenderState = Dev->GetRenderState();
 
 		pD3D11DeviceContext->VSSetShader(VSPNTStatic::GetPtr()->GetShader(), nullptr, 0);
+		pD3D11DeviceContext->GSSetShader(GSOutline::GetPtr()->GetShader(), nullptr, 0);
 		pD3D11DeviceContext->PSSetShader(PSPNTStatic::GetPtr()->GetShader(), nullptr, 0);
 
 		pD3D11DeviceContext->IASetInputLayout(VSPNTStatic::GetPtr()->GetInputLayout());
@@ -84,6 +85,7 @@ namespace basecross {
 
 		sb.Diffuse = Col4(1, 1, 1, 1.0f);
 		sb.Emissive = Col4(0.25f);
+		sb.Outline = Col4(1, 0, 0, 1);
 
 		World.transpose();
 		sb.World = World;

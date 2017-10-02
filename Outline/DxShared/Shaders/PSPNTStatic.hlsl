@@ -9,6 +9,7 @@ cbuffer SimpleConstantBuffer : register(b0)
 	float4 Emissive : packoffset(c13);
 	float4 Diffuse : packoffset(c14);
 	float4 CameraLocation : packoffset(c15);
+	float4 Outline : packoffset(c16);
 };
 
 Texture2D g_texture : register(t0);
@@ -16,6 +17,9 @@ SamplerState g_sampler : register(s0);
 
 float4 main(PSPNTInput input) : SV_TARGET
 {
+	if (input.outlineCol.x == 0)
+		return Outline;
+
 	float3 lightdir = normalize(LightDir.xyz);
 
 	float3 N1 = normalize(input.norm);

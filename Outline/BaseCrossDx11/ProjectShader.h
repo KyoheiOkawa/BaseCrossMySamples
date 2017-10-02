@@ -16,6 +16,7 @@ namespace basecross {
 		Col4 Emissive;
 		Col4 Diffuse;
 		Vec4 CameraLocation;
+		Col4 Outline;
 		PNStaticConstantBuffer() {
 			memset(this, 0, sizeof(PNStaticConstantBuffer));
 		};
@@ -24,6 +25,7 @@ namespace basecross {
 	DECLARE_DX11_CONSTANT_BUFFER(CBPNStatic, PNStaticConstantBuffer)
 	DECLARE_DX11_VERTEX_SHADER(VSPNTStatic,VertexPositionNormalTexture)
 	DECLARE_DX11_PIXEL_SHADER(PSPNTStatic)
+	DECLARE_DX11_GEOMETRY_SHADER(GSOutline);
 
 	DECLARE_DX11_VERTEX_SHADER(VSPCDirect, VertexPositionColor)
 	DECLARE_DX11_PIXEL_SHADER(PSPCDirect)

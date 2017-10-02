@@ -17,6 +17,9 @@
     <None Include="$(MSBuildThisFileDirectory)Shaders\INCStructs.hlsli" />
   </ItemGroup>
   <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\GSOutline.hlsl">
+      <ShaderType>Geometry</ShaderType>
+    </FxCompile>
     <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PSPCDirect.hlsl">
       <ShaderType>Pixel</ShaderType>
     </FxCompile>
