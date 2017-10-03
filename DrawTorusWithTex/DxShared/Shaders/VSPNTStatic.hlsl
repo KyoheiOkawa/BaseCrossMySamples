@@ -27,7 +27,7 @@ PSPNTInput main(VSPNTInput input)
 
 	result.tex = input.tex;
 
-	result.eyeDir = normalize(CameraLocation - input.position.xyz);
+	result.eyeDir = normalize(CameraLocation.xyz - input.position.xyz);
 
 	return result;
 }
