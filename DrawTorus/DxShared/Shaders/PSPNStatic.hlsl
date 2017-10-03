@@ -20,7 +20,7 @@ float4 main(PSPNInput input) : SV_TARGET
 	float3 N1 = normalize(input.norm);
 	float4 Light = saturate(dot(N1, -lightdir) * Diffuse) + Emissive;
 
-	float3 R = normalize(LightDir - input.norm * 2 * dot(LightDir, input.norm));
+	float3 R = normalize(LightDir.xyz - input.norm * 2 * dot(LightDir.xyz, input.norm));
 	float4 spec = pow(max(0, dot(R, input.eyeDir)), 50.0f);
 	Light += spec;
 

@@ -25,7 +25,7 @@ PSPNInput main(VSPNInput input)
 	result.norm = mul(input.norm, (float3x3)World);
 	result.norm = normalize(result.norm);
 
-	result.eyeDir = normalize(CameraLocation - input.position.xyz);
+	result.eyeDir = normalize(CameraLocation.xyz - input.position.xyz);
 
 	return result;
 }
