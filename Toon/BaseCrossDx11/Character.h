@@ -12,6 +12,7 @@ namespace basecross {
 		shared_ptr<MeshResource> m_SphereMesh;
 		Quat m_Rotation;
 		std::shared_ptr<TextureResource> m_TextureResource;
+		std::shared_ptr<TextureResource> m_ToonShadowTexture;
 	public:
 		TorusObject();
 		virtual ~TorusObject();

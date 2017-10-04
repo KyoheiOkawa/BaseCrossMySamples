@@ -27,6 +27,10 @@ namespace basecross {
 		App::GetApp()->GetAssetsDirectory(assetDir);
 		wstring texStr = assetDir + L"Checker.png";
 		m_TextureResource = TextureResource::CreateTextureResource(texStr);
+
+		texStr = assetDir + L"ToonShadow.png";
+		//texStr = assetDir + L"ToonShadowBrown.png";//影の色を変えてみたり
+		m_ToonShadowTexture = TextureResource::CreateTextureResource(texStr);
 	}
 
 	void TorusObject::OnUpdate() {
@@ -85,7 +89,7 @@ namespace basecross {
 
 		sb.Diffuse = Col4(1, 1, 1, 1.0f);
 		sb.Emissive = Col4(0.25f);
-		sb.Outline = Col4(1, 0, 0, 1);
+		sb.Outline = Col4(0, 0, 0, 1);
 
 		World.transpose();
 		sb.World = World;
@@ -106,6 +110,7 @@ namespace basecross {
 
 		//テクスチャ
 		pD3D11DeviceContext->PSSetShaderResources(0, 1, m_TextureResource->GetShaderResourceView().GetAddressOf());
+		pD3D11DeviceContext->PSSetShaderResources(1, 1, m_ToonShadowTexture->GetShaderResourceView().GetAddressOf());
 
 		pD3D11DeviceContext->DrawIndexed(m_SphereMesh->GetNumIndicis(), 0, 0);
 

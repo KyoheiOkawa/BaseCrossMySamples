@@ -21,7 +21,7 @@ namespace basecross {
 	void Scene::OnDraw() {
 		//描画デバイスの取得
 		auto Dev = App::GetApp()->GetDeviceResources();
-		Dev->ClearDefaultViews(Col4(0, 0, 0, 1.0f));
+		Dev->ClearDefaultViews(Col4(0.8f, 0.8f, 0.8f, 1.0f));
 		//デフォルト描画の開始
 		Dev->StartDefaultDraw();
 		m_TorusObject->OnDraw();

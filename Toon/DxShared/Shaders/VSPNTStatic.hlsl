@@ -30,7 +30,7 @@ PSPNTInput main(VSPNTInput input)
 
 	result.eyeDir = normalize(CameraLocation.xyz - input.position.xyz);
 
-	float4 subpos = input.position + float4(input.norm,0) * 0.025f;
+	float4 subpos = input.position + float4(input.norm,0) * 0.015f;
 	subpos = mul(subpos, World);
 	subpos = mul(subpos, View);
 	subpos = mul(subpos, Projection);
