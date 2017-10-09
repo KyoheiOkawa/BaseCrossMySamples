@@ -1492,7 +1492,7 @@ namespace basecross {
 		sd.BufferDesc.RefreshRate.Denominator = 1;	//リフレッシュレート最小値
 		sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;	//出力用として定義
 		sd.OutputWindow = hWnd;		//ウインドウのハンドル
-		sd.SampleDesc.Count = 1;		//マルチサンプリング 数は1
+		sd.SampleDesc.Count = 4;		//マルチサンプリング 数は1
 		sd.SampleDesc.Quality = 0;		//マルチサンプリングクオリティは0（最大）
 
 		sd.Windowed = TRUE;			//ウインドウモードで作成してあとからフルsクリーンにする
@@ -2289,6 +2289,8 @@ namespace basecross {
 			shadowMapDesc.Usage = D3D11_USAGE_DEFAULT;
 			shadowMapDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL | D3D11_BIND_SHADER_RESOURCE;
 			shadowMapDesc.Format = DXGI_FORMAT_R32_TYPELESS;
+			shadowMapDesc.SampleDesc.Count = 4;
+			shadowMapDesc.SampleDesc.Quality = 0;
 
 			ThrowIfFailed(
 				pD3D11Device->CreateTexture2D(&shadowMapDesc, nullptr, &pImpl->m_DepthStencil),
@@ -2479,7 +2481,7 @@ namespace basecross {
 			descDepth.MipLevels = 1;
 			descDepth.ArraySize = 1;
 			descDepth.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
-			descDepth.SampleDesc.Count = 1;
+			descDepth.SampleDesc.Count = 4;
 			descDepth.SampleDesc.Quality = 0;
 			descDepth.Usage = D3D11_USAGE_DEFAULT;
 			descDepth.BindFlags = D3D11_BIND_DEPTH_STENCIL;
@@ -2497,7 +2499,7 @@ namespace basecross {
 			D3D11_DEPTH_STENCIL_VIEW_DESC descDSV;
 			ZeroMemory(&descDSV, sizeof(descDSV));
 			descDSV.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
-			descDSV.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
+			descDSV.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2DMS;
 			descDSV.Texture2D.MipSlice = 0;
 
 			ThrowIfFailed(
