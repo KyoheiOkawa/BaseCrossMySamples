@@ -1,0 +1,12 @@
+[Dd]ebug*/
+[Ll]ib/
+[Rr]elease*/
+[Tt]est[Rr]esults/
+_UpgradeReport_Files/
+_ReSharper.*/
+BaseCrossDx11.VC.VC.opendb
+BaseCrossDx11.VC.db
+Temp/
+ipch/
+media/Shaders
+.vs/
